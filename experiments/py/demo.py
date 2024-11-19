@@ -24,6 +24,8 @@ def demo_model_editing(
     for comparison of model behavior. Returns the updated model and the original values of
     weights that were changed.
     """
+    
+    # print('inside_demo_model_editing')
 
     nethook.set_requires_grad(True, model)
 
@@ -34,7 +36,11 @@ def demo_model_editing(
         HPARAMS_DIR
         / hparams_prefix
         / f"{model.config._name_or_path.replace('/', '_')}{hparams_suffix}.json"
+        # / f"gpt2-xl/{hparams_suffix}.json"
     )
+    
+    # print("params_name", params_name)
+    # exit()
 
     print_loud(f"Retrieving {alg_name} hyperparameters")
     print("Loading from", params_name)

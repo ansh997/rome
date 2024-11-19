@@ -3,8 +3,8 @@
   RESULTS_DIR: "results"
 
   # Data files
-  DATA_DIR: "data"
-  STATS_DIR: "data/stats"
+  DATA_DIR: f"/scratch/hmnshpl/data"
+  STATS_DIR: "/scratch/hmnshpl/data/stats"
 
   # Hyperparameters
   HPARAMS_DIR: "hparams"

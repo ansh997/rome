@@ -665,6 +665,9 @@ def get_embedding_cov(mt):
         raw_ds = load_dataset(
             ds_name,
             dict(wikitext="wikitext-103-raw-v1", wikipedia="20200501.en")[ds_name],
+            # dict(wikitext="wikitext-103-raw-v1", wikipedia="20220301.en")[ds_name],
+            # split="train",
+            cache_dir='/scratch/hmnshpl/rome_data'
         )
         try:
             maxlen = model.config.n_positions
